@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="/favicon/Webalys-Kameleon.pics-Coding-Html.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="/caderno.css">
+    
+    <title>
+        HTML5 e CSS3
+    </title>
+    <style>
+        h1.caixa {
+            background-color: #475C70;
+    
+            height: 300px;
+            width: 300px;
+            /* o box-size é p height e o widht*/
+    
+            border: 10px double #6D96BD;
+    
+            padding: 5px 10px 15px 20px;
+             /*O padding é da margem para dentro*/
+             
+             margin: 10px auto 10px auto;
+              /*A margem é da borda para fora*/
+    
+            outline: 5px dashed #BD8380;
+        }
+        a {
+            border: 2px dotted #6D96BD;
+        }
+    </style>
+
+</head>
+<body>
+
+   <h1>Entenda o Modelo de caixas</h1>
+        
+    <ul>
+        <li>
+            <strong>Content (Conteúdo):</strong> Tudo começa a partir do conteúdo, Toda caixa é composta apenas pelo conteúdo. Apenas o &lt;body&gt; já vem com uma margin de 8px.
+        </li>
+        <li>
+            <strong>Width (largura)</strong> e <strong>Height (altura):</strong> Todo conteúdopossue largura e altura que chamamos de box-size (tamanho da caixa). o que não inclue as outras medidas.
+        </li>
+        <li>
+            <strong>border (borda):</strong> Fica em volta do conteúdo e de seu tamanho. A borda pode ter uma expessura, uma cor e um formato.
+        </li>
+        <li>
+            <strong>margin (margem):</strong> Fica entre a borda e o conteúdo - da borda para fora temos a margem.
+        </li>
+        <li>
+            <strong>Padding (preenchimento):</strong> da borda para fora temos o padding.
+        </li>
+        <li>
+            <strong>outline (contorno):</strong> fica entre a margem e a borda, muito pouco utilizado. Ele é um traço visual que podemos criar fora da borda e o cáuculo da sua expessura faz parte da margem estabelecida.
+        </li>
+    </ul>
+            
+    <h2>
+        Tipos de caixa
+    </h2>
+        
+    <ol>
+        <li>
+            <strong>block-level:</strong> Sempre vai se iniciar em uma nova linha e vai ocupar a largura total do elemento onde ele está contido.Se não estiver contido em nenhuma outra caixa, ele vai ocupar 100% da largura do &lt;body&gt;.
+        </li>
+        <li>
+            <strong>inline-level:</strong> Vai começar no ponto exto onde foram definidos. E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.
+        </li>
+    </ol>
+    
+    <div>
+            
+    <h4>
+        Exemplos de block-level:
+    </h4>
+
+    <p>
+    <code>
+        &lt;address&gt;
+        &lt;article&gt;
+        &lt;aside&gt;
+        &lt;blockquote&gt;
+        &lt;canvas&gt;
+        &lt;dd&gt;
+        &lt;div&gt;
+        &lt;dl&gt;
+        &lt;dt&gt;
+        &lt;fieldset&gt;
+        &lt;figcaption&gt;
+        &lt;figure&gt;
+        &lt;footer&gt;
+        &lt;form&gt;
+        &lt;h1&gt; - &lt;h6&gt;
+        &lt;header&gt;
+        &lt;hr&gt;
+        &lt;li&gt;
+        &lt;main&gt;
+        &lt;nav&gt;
+        &lt;noscript&gt;
+        &lt;ol&gt;
+        &lt;p&gt;
+        &lt;pre&gt;
+        &lt;section&gt;
+        &lt;table&gt;
+        &lt;tfoot&gt;
+        &lt;ul&gt;
+        &lt;video&gt;
+    </code>
+    </p>
+        
+    <h4>
+        Exemplos de inline-level:
+    </h4>
+            
+    <p>
+        <code>
+            &lt;a&gt;
+            &lt;abbr&gt;
+            &lt;acronym&gt;
+            &lt;b&gt;
+            &lt;bdo&gt;
+            &lt;br&gt;
+            &lt;button&gt;
+            &lt;cite&gt;
+            &lt;code&gt;
+            &lt;dfn&gt;
+            &lt;em&gt;
+            &lt;i&gt;
+            &lt;img&gt;
+            &lt;input&gt;
+            &lt;kbd&gt;
+            &lt;label&gt;
+            &lt;map&gt;
+            &lt;object&gt;
+            &lt;output&gt;
+            &lt;q&gt;
+            &lt;samp&gt;
+            &lt;scrpt&gt;
+            &lt;select&gt;
+            &lt;amall&gt;
+            &lt;span&gt;
+            &lt;strong&gt;
+            &lt;sub&gt;
+            &lt;textarea&gt;
+            &lt;tt&gt;
+            &lt;var&gt;
+        </code>
+    </p>
+
+    <h1> Modelos de caixas na prática - parte 1</h1>
+
+    <h2>Exemplos de caixas box-level</h2>
+ 
+     <p>
+         Paragrafos também são exemplos de box level, mas os <a href="#">Mas os links são exemplos de caixas inline-level</a>. Vamos ver como isso tudo funciona...
+     </p>
+ 
+     <h1 class="caixa">
+         Box-Level
+     </h1>
+ 
+     <pre>
+         <code>
+             &lt;style&gt;
+                 h1.caixa {
+                     background-color: #475C70;
+                     height: 300px;
+                     width: 300px;
+                     margin: auto;
+                 }
+                 a {
+                     border-width: 2px;
+                     border-style:dotted;
+                     border-color: #6D96BD;
+                 }
+             &lt;/style&gt;
+             &lt;h1&gt; class="caixa">
+                 Box-Level
+             &lt;/h1&gt;
+         </code>
+     </pre>
+
+     <h1>Modelos de caixas na prática - parte 2</h1>
+    
+    <h2>Margem e padding</h2>
+
+    <pre>
+        <code>
+        &lt;style&gt;
+            h1.caixa {
+                <strong>background-color:</strong> #475C70;
+
+                <strong>height:</strong> 300px;
+                <strong>width:</strong> 300px;
+
+                <strong>border-width:</strong> 10px;
+                <strong>border-style:</strong> double;
+                <strong>border-color:</strong> #6D96BD;
+
+                <strong>padding-top:</strong> 5px; 
+                <strong>padding-right::</strong> 10px;
+                <strong>padding-button:</strong> 15px;
+                <strong>padding-left:</strong> 20px;
+
+                <div style="color: green;">
+                    /*O padding é da margem para dentro*/
+                </div>
+
+                <strong>margin-top:</strong> 10px; 
+                <strong>margin-right::</strong> 20px;
+                <strong>margin-button:</strong> 10px;
+                <strong>margin-left:</strong> 20px;
+
+                 <div style="color: green;">
+                    /*A margem é da borda para fora*/
+                </div>
+                
+                <strong>outline-width:</strong> 5px;
+                <strong>outline-style:</strong> dashed;
+                <strong>outline-color:</strong> #BD8380;
+            }    
+                <div style="color: green;">
+                    /*outline é diferente de border pois ele fica <br> dentro da margem, ele não aparece no devtools no quadro de margen, <br> mas aparece na lista ao lado*/
+                </div>
+            
+            a {
+                <strong>border-width:</strong> 2px;
+                <strong>border-style:</strong> dotted;
+                <strong>border-color:</strong> #6D96BD;
+            }
+        &lt;/style&gt;
+        </code>
+    </pre>
+
+    <p>
+        Se quiser centralizar uma caixa use margin: auto, no caso de centralizar texto use <span style="color: #1d26a3;">"text-align: center;"</span>
+    </p>
+
+    <p>
+        vamos simplificar borda, paddin, margin e outline. Vamos utilizar shorthands
+    </p>
+     <pre>
+         <code>
+             <strong>border:</strong>  2px dotted #6D96BD;
+
+             <strong>padding:</strong> 5px(top) 10px(hight) 15px(button) 20px(left);
+             <div style="color: green;">
+            /* sempre nessa ordem: cima, direita, abaixo, esquerda. <br> como o relógio. Se as quatro forem iguais basta informar apenas <br> uma vez.
+            </div>
+
+            <strong>margin:</strong> 10px 20px;
+            <strong>margin:</strong> 10px auto 20px auto;
+            <div style="color: green;">
+            /*Caso eu coloque dois valores tipo 10px 20px; ele vai <br> igualar o de cima e o de baixo com 10px e vai igualar as laterais <br> com 20px cada uma. E se eu quiser centralizar posso colocar auto <br> nas margens da esquerda e da direita que vai calcular a margem <br> automaticamente*/</div>
+
+            <strong>outline:</strong> 5px dashed #BD8380;
+            
+        </code>
+     </pre>
+
+</body>
+</html> 
+
+   
+

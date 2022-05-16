@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+       HTML5 e CSS3
+    </title>
+    <style>
+        h1.borda{
+            background-color: white;
+            color: black;
+            border: 22px solid transparent;
+            margin: 10px;
+            border-image-source: url('borda.png');
+            border-image-slice: 32;    /*Não é px*/
+            border-image-repeat: stretch;
+            width: 300px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    
+    <h1>Bordas desenhadas</h1>
+    
+    <h2>Teste de Borda com Gimp</h2>
+
+    <p>Nova imagem com 80 por 80 px, clica na régua e arrasta para dividir, duas linhas verticais e duas horizontais. Em seguida com a elipse fazer um círculo não cerrilhado e colorir com o balde. depois duplicar as camadas e dos círculos e colocar em cada espaço menos no centro. Depois colorir com uma cor diferente os 4 círculos das pontas. expoertar imagem normalmente.</p>
+
+    <h1 class="borda">Esta é minha borda</h1>
+
+    <pre>
+        <code>
+            &lt;style&gt;
+                h1.borda{
+                    background-color: white;
+                    color: black;
+                    border: 30px solid black;
+                    margin: 20px;
+                    <strong>border-image-source:</strong> url('borda.png');
+                    <strong>border-image-slice:</strong> 39;
+                    <strong>border-image-repeat:</strong> repeat; <span style="color: green;">(ou strech)</span>
+                }
+            &lt;/style&gt;
+        </code>
+    </pre> 
+       
+    <p>Pode simplificar assim:</p> <p><code>border-image: url('borda.png') 27 repeat</code></p>
+
+    <p>Não pode tirar a borda normal se não ela para de funcionar. Precisa usar uma borda e pode ser transparente no lugar de preto.</p>
+
+</body>
+</html>

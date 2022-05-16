@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Nesse exercício, veremos as formas como as cores podem ser representadas em seu estilo -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores em CSS</title>
+</head>
+<body>
+    <h1>Cores em CSS</h1>
+    <p>Para entender esse exercício, olhe bem atentamente o código fonte do arquivo.</p>
+    <h2 style="background-color: darkblue; color: white;">Este título está colorido usando cores por nome</h2>
+    <h2 style="background-color: #00008b; color: #ffffff;">Já esse está usando cores pelo código Hexadecimal</h2>
+    <h2 style="background-color: rgb(0, 0, 139); color: rgb(255, 255, 255);">Este outro está colorido usando códigos RGB (red, green, blue)</h2>
+    <h2 style="background-color: hsl(240, 100%, 27%); color: hsl(0, 0%, 100%);">Este outro aqui está usando códigos HSL (hue, saturation, light)</h2>
+    <p>As cores resultantes são exatamente as mesmas, mas o formato de representação muda conforme o padrão escolhido.</p>
+    <p>Também é possível usar transparência, usando o formato RGBA (red, green, blue, alpha)</p>
+    <h2 style="background-color: rgba(0, 0, 139, 0.5); color: white;">Nesse título, o fundo azul teve sua transparência configurada para 50%</h2>
+
+    <h2>Como representar uma cor</h2>
+    
+    <p>As cores em uma tela são compostas da junção de três cores primárias: <strong>vermelho</strong> (red), <strong>verde</strong> (green), e <Strong>azul</Strong> (blue).</p>
+    
+     
+    <p>Se usarmos todas as cores primárias no máximo, chegamos ao <strong>branco</strong>. E com todas as cores no mínimo, obtemos o <strong>preto</strong>, totalizando <strong>256 possibilidades</strong> para cada elemento. Cada cor primária pode ter um valor <strong>entre o e 255</strong></p>  
+
+    <p>No <i>VisualCode</i> ao colocar a seta em cima do nome da cor aparece um quadro de cores, na barra de cima podemos escolher como queremos escrever as cores e na barra lateral escolhemos a cor ao lado a trasparência.</p>
+
+    <h2>Representação por nome</h2>
+
+    <p>podemos representar as cores por nome em inglês, como por exemplo red, greem, blue, yellow etc... No entanto, dessa forma temos uma limitação para a representação de cores.</p>
+    
+    <pre>
+        <code>
+            color: black;
+        </code>
+    </pre>
+    
+    <h2>representação por códigos hexadecimais</h2>
+    
+    <p><strong>Decimal</strong> = 0 1 2 3 4 5 6 7 8 9  é decimal pq tenho dez digitos de base. <br>
+    <strong>Hexadecimal</strong> = 0 1 2 3 4 5 6 7 8 9 a b c d e f  se contar do 0 até f vai dar 16 algarismos. <br>
+    0 é o número menos significativo, ou seja mínimo, e f é o mais significativo, quer dizer máximo.</p>
+        
+    <pre>
+        <code>
+            color: #000000;
+        </code>
+    </pre>
+
+    <p>No caso acima representa a cor black. depois das (#) os <strong>00 (nada de vermelho)</strong>, <strong>00(nada de verde)</strong> e <strong>00 (nada de azul)</strong>. Conforme esses números vão subindo, vai se acrescentando uma ou mais dessas cores (vermelho, verde e/ azul) assim vai se formando as cores.</p>
+       
+    <h2>Representação em RGB</h2>
+        
+    <p><strong>00 red</strong>, <strong>00 green</strong>, <strong>00 blue</strong>, também indicam não há presença de nenhuma dessas cores esse código representa a cor black em RGB.</p>
+
+    <pre>
+        <code>
+            color: rgb(0, 0, 0);
+        </code>
+    </pre>
+
+    <h2>Representação por HSL</h2>
+        
+    <p>E podem ser representadas baseado na maneira que o olho humano encherga as cores: o padrão <strong>HSL</strong>. <br> (hue=matiz, saturation=saturação%, lightness=luminosidade%) <br>
+    Indica que temos <strong>hue</strong> (matiz), <strong>saturation</strong> (saturação) e <strong>lightness</strong>(luminosidade).</p>
+        
+    <pre>
+        <code>
+            color: hsl(0, 0%, 0%);
+        </code>
+    </pre>
+
+    <h2>Ferramentas para gerar paletas de cores</h2>
+    
+    <p>Uma ferramenta muito útil para formar sua paleta de cores é o <a href="https://color.adobe.com/pt/mythemes/urn:aaid:sc:US:28cdd7f8-7b77-4b01-b6db-f26e68e0da34" target="_blank" rel="external">Adobe color</a>.</p>
+        
+    <p>Outra ferramenta é o <a href="https://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank" rel="external">paletton.com</a></p>
+
+    <p>Mais uma opção é o <a href="https://coolors.co/" target="_blank" rel="external">Coolors.co</a></p>
+
+    <h2>Como capturar cores da tela?</h2>
+
+    <p>Ferramentas para captura de cores: <a href="https://chrome.google.com/webstore/category/extensions?hl=pt-br" target="_blank" rel="external">Busque por Chrome Web Store</a>Procure pela extenção <strong>ColorZilla</strong> e clique em usar no chrome.</p>
+
+    <h2>Usando Gradientes em CSS</h2>
+    
+    <p>podemos gerar Gradientesem css, da seginte forma.</p>
+
+    <pre>
+        <code>
+            body {
+                background-image: linear-gradient <br>                (90deg, yelow, red);
+            }
+        </code>
+    </pre>
+    
+    <p>Um gradiente é considerado pelo navegador como uma imagem.podemos indicar quantas cores quisermos que o navegador vai gerar o degradê. podemos colocar outros valores de ângulo, incluindo negativos (45deg, -90deg, 25deg e 365deg)</p>
+       
+    <h4>pode-se gerar os gradientes radiais:</h4>
+        
+    <pre>
+        <code>
+        body {
+            background-image: <br>            radial-gradient (circle, red, <br>            yelow, red);
+        }
+        </code>
+    <pre>
+</body>
+</html>

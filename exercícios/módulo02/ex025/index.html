@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 e CSS3</title>
+
+</head>
+<body>
+    <h1>Variáveis em CSS</h1>
+    
+    <h2>Váriáveis personalizadas com CSS</h2>
+        
+    <p>Cadastrar os esquemas de cores e fontes do nosso site vai facilitar na hora de efetuar mudanças estéticas.</p>
+
+    <p>Basta criar uma pseudo-class chamada <code>:root</code>. As váriáveis personalizadas em CSS devem ter seus nomes iniciados com dois traços obrigatóriamente.</p>
+
+    <pre>
+        <code>
+            :root{
+                --cor0: #c5ebd6;
+                --cor1: #83e1ad;
+                --cor2: #3ddc84;
+                --cor3: #2fa866;
+                --cor4: #1a5c37;
+                --cor5: #063d1e;
+                --font-padrao: Arial, Helvetica, sans-serif;
+                --font-destaque: 'Bebas Neue', 'cursive';
+                --font-android: 'Android', sans-serif;
+            }
+        </code>
+    </pre>
+
+    <h2>Uso do seletor * em CSS</h2>
+
+    <p>Ele basicamente aplica uma configuração padrão para TODOS os elementos do código HTML ao qual o estilo está sendo aplicado.</p>
+
+    <pre>
+        <code>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+        </code>
+    </pre>
+    
+</body>
+</html>

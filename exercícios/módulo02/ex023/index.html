@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML e CSS3</title>
+
+</head>
+<body>
+    <h1>Aula 26 _  Sombras nas caixas</h1>
+    
+    <h2>
+        Sombras nas caixas
+    </h2>
+
+    <p>
+        As sombras são muito úteis para dar volume, para dar a sensação de que as caixas estão ali realmente.
+    </p>
+
+    <pre>
+        <code>
+            &lt;style&gt;
+                box-shadow: 1px<span style="color: green;">(deslocamento horizontal)</span> <br>                    1px<span style="color: green;">(vertical)</span> 1px<span style="color: green;">(espalhamento)</span> black<span style="color: green;">(sombra)</span>;
+            &lt;/style&gt;
+        </code>
+    </pre>
+        
+    
+    <h1> Aula 27 _ Bordas decoradas</h1>
+
+    <h2>
+        vértices arredondados
+    </h2>
+
+    <p>
+        Podemos arredondar os vértices usando a declaração border-radius. <code>border-radius: 10px</code> 
+    </p>
+    <p>
+        Se for necessário, podemos insicar quatro medidas diferentes, uma para cada vértice:  <code>border-radius: 10px 20px 30px 40px</code> 
+    </p>
+    <p>
+        também é possível indicar apenas dois valores, o que vai agir em vértices intercaladas, partindo do canto superior esquerdo: <code>border-radius: 10px 30px</code> 
+    </p>
+
+    <p> Com esse código abaixo podemos fazer uma bola:
+    <pre>
+        <code>
+            &lt;style&gt;
+                div#bola {
+                    height: 100px;
+                    width: 100px;
+                    margin: 30px;
+                    background-color: white;
+                    border-radius: 50%;
+                }
+            &lt;style&gt;
+        </code>
+    </pre>
+
+    <p>
+        Pode usar porcentagem no lugar de pixels.</p>
+    </p>
+   
+</body>
+</html>

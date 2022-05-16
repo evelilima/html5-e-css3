@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>TML5 e CSS3</title>
+
+    <style>
+        div.aula{
+            text-align: left;
+        }
+
+        div.aula > p {
+            display: none;
+        }
+
+        div.aula:hover > p {
+           display: block;
+           color: black;
+           background-color: #6D96BD;
+           width: 200px; 
+           margin-top: 10px;
+           padding: 10px;
+           border-radius: 0px;
+        }
+
+        div.aula:hover {
+            color: #475C70;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <h1>Aula 20b _ Exemplo de :hover</h1>
+    
+    
+    <p>Passe o mause sobre o texto abaixo:</p>
+
+    <div class="aula">Passe o mause aqui!
+        <p>Texto escondido...</p>
+    </div>
+    
+    <h2>Exemplo de hover</h2>
+
+    <pre>
+        <code>
+            &lt;style&gt;
+                div{
+                    text-align: left;
+                }
+                div > p {
+                    display: none;
+                }
+                div<mark>:hover</mark> > p {
+                    display: block;
+                    color: black;
+                    background-color: #6D96BD;
+                    width: 200px;
+                }
+                div<mark>:hover</mark> {
+                    color: #475C70;
+                }
+            &lt;/style&gt;
+        </code>
+
+        <code>
+            &lt;body&gt;
+                &lt;p&gt;Passe o mause sobre o texto abaixo:&lt;/p&gt;
+                &lt;div&gt;
+                    Passe o mause aqui!
+                    &lt;p&gt;Texto escondido...&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/body&gt;  
+        </code>
+    </pre>
