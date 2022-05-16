@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1{
+    padding: 20px;
+}
+h4{
+    font-weight: lighter;
+}  
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover.site{
+    font-size: 17px;
+    text-decoration: underline;
+}
+img:hover.voltar{
+    width: 60px;
+}
+img:hover.thumbs{
+    width: 250px;
+}
+
+nav{
+    margin: auto;
+    padding: 30px;
+}
