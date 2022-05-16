@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vídeos</title>
+</head>
+<body>
+    <h1>Vídeos</h1>
+    
+        <p>Baixar o <b>Handbrake</b> para converter formatos de vídeos diferentes.
+        baixar vídeos no site <b>Pexels</b>. <br> Para gerar arquivo OGV coloque no navegador do google <b>conversor OGV</b>. (online converter) arraste o vídeo para a área indicada no site e mandar converter e ele vai permitir o download. O OGV tem pouca compatibilidade com alguns conversores.</p>
+
+        <h3>Inserindo vídeos hospedados localmente</h3>
+        
+        <p>Este vídeo está hospedado no meu próprio servidor.</p>
+       
+        <p>Abaixo vemos como fica a tag simples de vídeo:</p>
+
+        <pre>
+            <code>
+                &lt;video src="<mark>video flower 3.webm</mark>" width="300" <mark>controls</mark>&gt;&lt;/video&gt;
+            </code>
+        </pre>
+
+        <video src="video flower 3.webm" width="300" controls></video>
+
+        <p>Coloque todos os formatos para que o vídeo funcione em vários navegadores. Por exemplo, o safari não é compátivel com OGV.</p>
+        
+        <p>
+            Como fazer para colocar todos os formatos?
+        </p>
+
+        <pre>
+            <code>
+                &lt;video controls&gt;
+                    &lt;source src="videos/video flower 1.m4v" type="video/m4v"&gt;
+                    &lt;source src="videos/video flower 3.webm" type="video/webm"&gt;
+                    &lt;source src="videos/video flower 2.mp4" type="video/mp4"&gt;
+                    &lt;p&gt;Seu navegador não é compatível com reprodução de vídeos&lt;/p&gt;
+                &lt;/video&gt;
+            </code>
+        </pre>
+
+        <video width="500" poster="images.jpg" controls>
+        <source src="video flower 1.m4v" type="video/m4v">
+        <source src="video flower 3.webm" type="video/webm">
+         <source src="video flower 2.mp4" type="video/mp4">
+        <p>Seu navegador não é compatível com reprodução de vídeos</p></video>
+
+        <p>a ordem dos codigos tem total influência, ele carrega na ordem de cima pra baixo, se o primeiro arquivo não carregar ele tenta o segundo e assim por diante...</p>
+
+        <p>Vídeos usando a tag &lt;videos&gt;&lt;/videos&gt; vão consumir muito tráfego de dados, o que vai pesar no bolso do cliente.</p>
+
+        <h1>Vídeos externos</h1>
+    
+
+        <h2>Incorporação de vídeos externos</h2>
+
+        <h3>Inserindo vídeos do youtube</h3>
+
+        <p>Basta ir no vídeo do youtube que você quer incorporar e clicar em compartilhar e copiar o código e colar no studio code.</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/21mDekTZwsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <p>Se você cria um site para o seu cliente e os vídeos dele além de estar no site, está também no youtube, você estará economizando drasticamente o consumo de tráfego e isso amplia muito mais a abrangência que o youtube vai dar, visto que ele é o segundo maior buscador do mundo. Suba seus vídeos no youtube e incorpore em seu site.</p>
+        
+        <p>Se a idéia é privar os vídeos apenas para assinantes por exemplo, esse método não vai atender a essa necessidade. daí há serviços que podemos usar para isso, por exemplo o Vimeo. Ele é tipo o youtube mas ele permite que você escolha se quer deixar os videos livres ou não.</p>
+
+        <p>O Vimeo é pago mas a vantagem é a qualidade do video mas a desvantagem é que o algoritimo dele não é igual ao youtube. então se a internet não for muito boa o video vai dar umas travadinhas.</p>
+
+        <h3>Inserindo vídeo do Vimeo</h3>
+
+        <iframe src="https://player.vimeo.com/video/197093965?h=7fbc516b5a&color=ff9933&portrait=0" width="500" height="281" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+
+</body>
+</html>

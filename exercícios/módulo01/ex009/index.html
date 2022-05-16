@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    
+    <h2>Listas Ordenadas</h2>
+
+    <p>&lt;ol&gt; &lt;/ol&gt; significa Lista Ordenadas <br> &lt;li&gt;&lt;/li&gt; refere- se a cada item da lista.</p>
+
+    <ol>
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+    </ol>
+
+    <pre>
+        <code>
+            <mark style="background-color: rgb(43, 226, 104);">&lt;ol&gt;</mark>
+
+                <mark>&lt;li&gt;</mark>Acordar<mark>&lt;/li&gt;</mark>
+
+                <mark>&lt;li&gt;</mark>Ligar para o João<mark>&lt;/li&gt;</mark>
+
+                <mark>&lt;li&gt;</mark>Tomar café<mark>&lt;/li&gt;</mark>
+
+                <mark>&lt;li&gt;</mark>Escovar os dentes<mark>&lt;/li&gt;</mark>
+
+            <mark style="background-color: rgb(43, 226, 104);">&lt;/ol&gt;</mark>
+        </code>
+    </pre>
+    
+    <p>O &lt;/li&gt; é opcional</p>
+    <p>Podemos usar em &lt;ol&gt; o parâmetro <u>type=</u> que vai fornecer cinco opções (1 - A - a - I - i) 1 é a lista númerada que começa por padrão em 1, se você quiser que começe em 4 por exemplo, precisa incluir <u>start="4".</u></p>
+    <pre>
+        <code>
+            &lt;ol <mark>type=""</mark>&gt;
+                &lt;li&gt;Acordar&lt;/li&gt;
+                &lt;li&gt;Ligar para o João&lt;/li&gt;
+                &lt;li&gt;Tomar café&lt;/li&gt;
+                &lt;li&gt;Escovar os dentes&lt;/li&gt;
+            &lt;/ol&gt;
+        </code>
+    </pre>
+
+    <ol type="1" start="4">
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+
+    </ol>
+
+    <pre>
+        <code>
+            &lt;ol type="1" <mark>start="4"</mark>&gt;
+                &lt;li&gt;Acordar&lt;/li&gt;
+                &lt;li&gt;Ligar para o João&lt;/li&gt;
+                &lt;li&gt;Tomar café&lt;/li&gt;
+                &lt;li&gt;Escovar os dentes&lt;/li&gt;
+            &lt;ol&gt;
+        </code>
+    </pre>
+
+
+    <p>Se eu utilizar a opção A em <u>Type="A"</u> a lista ficará com alfabeto em maiúsculas.</p>
+    <ol type="A">
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Ir para o trabalho</li>
+        <li>voltar pra casa</li>
+        <li>jantar</li>
+        <li>Dormir</li>
+    </ol>
+
+
+    <pre>
+        <code>
+            &lt;ol type="<mark>A</mark>"&gt;
+                &lt;li&gt;Acordar&lt;li&gt;
+                &lt;li&gt;Ligar para o João&lt;li&gt;
+                &lt;li&gt;Tomar café&lt;li&gt;
+                &lt;li&gt;Escovar os dentes&lt;li&gt;
+                &lt;li&gt;Ir para a faculdade&lt;li&gt;
+                &lt;li&gt;Ir para o trabalho&lt;li&gt;
+                &lt;li&gt;voltar pra casa&lt;li&gt;
+                &lt;li&gt;jantar&lt;li&gt;
+                &lt;li&gt;Dormir&lt;li&gt;
+            &lt;ol&gt;
+        </code>
+    </pre>
+
+    <p>Para iniciar da letra D, por exemplo, o certo é eu usar o parâmetro <u>type=4</u>.</p>
+
+    <ol type="A" start="4">
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Ir para o trabalho</li>
+        <li>voltar pra casa</li>
+        <li>jantar</li>
+        <li>Dormir</li>
+    </ol>
+
+    <pre>
+        <code>
+            &lt;ol type="A" start= "<mark>4</mark>"&gt;
+                &lt;li&gt;Acordar&lt;li&gt;
+                &lt;li&gt;Ligar para o João&lt;li&gt;
+                &lt;li&gt;Tomar café&lt;li&gt;
+                &lt;li&gt;Escovar os dentes&lt;li&gt;
+                &lt;li&gt;Ir para a faculdade&lt;li&gt;
+                &lt;li&gt;Ir para o trabalho&lt;li&gt;
+                &lt;li&gt;voltar pra casa&lt;li&gt;
+                &lt;li&gt;jantar&lt;li&gt;
+                &lt;li&gt;Dormir&lt;li&gt;
+            &lt;ol&gt;
+        </code>
+    </pre>
+
+    <p>Nas outras opções "<mark>a</mark>" vamos ter a sequência em letras minúsculas. No caso do "<mark>I</mark>" vai ficar em números romanos com letras maiúsculas. E o "<mark>i</mark>" letras romanas em minúsculas.</p>
+
+    <ol type="a">
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Ir para o trabalho</li>
+        <li>voltar pra casa</li>
+        <li>jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <ol type="I">
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Ir para o trabalho</li>
+        <li>voltar pra casa</li>
+        <li>jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <ol type="i">
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Ir para o trabalho</li>
+        <li>voltar pra casa</li>
+        <li>jantar</li>
+        <li>Dormir</li>
+    </ol>
+
+    <h2>Listas Não Ordenadas</h2>
+    
+    <p>São listas que não seguem uma ordem numerada. <br> A tag <mark>&lt;ul&gt;</mark> são Listas não ordenadas.</p>
+
+    <ul>
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Tomate</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+    <p>Ja entrou com a bolinha mas eu tenho também três opções em <mark>type=""</mark> Por ex.: <br> type="<mark>disc</mark>" (como o exemplo acima).<br>
+    type="<mark>circle</mark>" <br> type="<mark>square</mark>" </p>
+
+    <ul type="circle" >
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Tomate</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+    <ul type="square" >
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Tomate</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+<h1>Listas mistas e definiçõe</h1>
+
+<h2>Juntando Listas 1.0</h2>
+    <ol type="I">
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Cliper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+    <h2>Meus Jogos Favoritos</h2>
+    <ol type="I">
+        <li>PC</li>
+        <ul type="square">
+            <li>Minecraft</li>
+            <ul type="disc">
+                <li>Java</li>
+                <li>Bedrock</li>
+            </ul>
+            <li>The Sims</li>
+        </ul>
+        <li>Celular</li>
+        <ul>
+            <li>Brawl Stars</li>
+            <li>Hay Day</li>
+            <li>Haft</li>
+        </ul>
+    </ol>
+    <p> <b>Obs.:</b> <i>Um atalho para modificar varias tags ao mesmo tempo é clicando onde vc quer apagar dentro da tag e apertando a tecla Alt do teclado vc vai clicando nas outras tags na mema posição depois solta o alt deleta e reescreve.</i></p>
+    <h2>Listas de Definições</h2>
+    <p>É como se fosse um dicionário, você coloca o termo e a definição dele.</p>
+    <p>
+        <mark>&lt;dt&gt;</mark>: Termo <br> <mark style="background-color: rgb(43, 226, 104);">&lt;dd&gt;:</mark> Descrição
+    </p>
+    <dt>HTML</dt>
+    <dd>Linguagem de Marcação para a criação do conteúdo de um site.</dd>
+    <dt>CSS</dt>
+    <dd>Linguagem de marcação para a criação do design de um site.</dd>
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    <pre>
+        <code>
+            <mark>&lt;dt&gt;</mark>HTML<mark>&lt;/dt&gt;</mark>
+            <mark style="background-color: rgb(43, 226, 104);">&lt;dd&gt;</mark>Linguagem de Marcação para a criação do conteúdo de um site.<mark style="background-color: rgb(43, 226, 104);">&lt;/dd&gt;</mark>
+            <mark>&lt;dt&gt;</mark>CSS<mark>&lt;/dt&gt;</mark>
+            <mark style="background-color: rgb(43, 226, 104);">&lt;dd&gt;</mark>Linguagem de marcação para a criação do design de um site.<mark style="background-color: rgb(43, 226, 104);">&lt;/dd&gt;</mark>mark style="background-color: rgb(43, 226, 104);"
+            <mark>&lt;dt&gt;</mark>JavaScript<mark>&lt;/dt&gt;</mark>
+            <mark style="background-color: rgb(43, 226, 104);">&lt;dd&gt;</mark>Linguagem de programação para a criação de interatividade de um site.<mark style="background-color: rgb(43, 226, 104);">&lt;/dd&gt;</mark>
+        </code>
+    </pre>
+    <p><b>Obs.:</b> <i>O buscador do Google dá mais valor para sites que usam essas tags quando alguém pesquisa a definição de algum termo.</i></p>
+</body>
+</html>

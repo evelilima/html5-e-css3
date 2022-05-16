@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+
+    <h2>Código-fonte e Pré- formatação</h2>
+
+    <p>o comando document.getElementById(`teste`) é escrito em liguagem JavaScript.</p>
+
+    <p><i>essa fonte não é monoespassada. cada letra tem um espaço diferente.</i></p>
+
+    <p>Como resolver? envelopando o comando e usa a tag &lt;code&gt; &lt;/code&gt; no comando selecionado.  <code>document.getElementById(`teste`)</code> Assim fica mais fácil de ler código.</p>
+
+    <pre>
+        <code>
+            num = int(input(`digite um número`))
+            if num % 2 == o:
+                print(f`O número {num} é PAR`)
+            else:
+                print(f`O número {num} é IMPAR`)
+                print(`fim do programa`)
+        </code>
+    </pre>
+
+    <p>A tag &lt;code&gt; &lt;/code&gt; não arruma o seu código com identação. como vemos acima fica um código do lado do outro.</p>
+
+    <p>Como resolver? coloque o código dentro da fonte &lt;pre&gt; &lt;/pre&gt;</p>
+
+    <pre>
+        <code>
+            num = int(input(`digite um número`))
+            if num % 2 == o:
+                print(f`O número {num} é PAR`)
+            else:
+                print(f`O número {num} é IMPAR`)
+                print(`fim do programa`)
+        </code>
+    </pre>
+   
+    
+    <p>Para alterar o espaço que ficou da margrm, seleciona o código que vc quer sigura o <b>SHIFT</b> e aperta <b>TAB</b> que o código recua. Se quiser mover para o lado novamente aperta apenas a tecla <b>TAB</b></p>
+    
+    <pre>
+        <code>
+            num = int(input(`digite um número`))
+            if num % 2 == o:
+                print(f`O número {num} é PAR`)
+            else:
+                print(f`O número {num} é IMPAR`)
+                print(`fim do programa`)
+        </code>
+    </pre>
+    
+    <h2>Citações Simples</h2>
+
+    <p>Como diria o pai de um amigo:<q> O computador é um burro muito rápido</q>
+
+    <p>Eu posso simplesmente colocar aspas, mas eu não estaria dando significado. O comando &lt;q&gt; &lt;/q&gt; é semântica que dá o sentido de uma citação.</p>
+
+    <h2>Citações Completas</h2>
+
+    <p>segundo Jeff Noble, no seu livro HTML para leigos:
+    <blockquote cite = https://www.google.com.br/books/edition/HTML_XHTML_e_CSS_Para_Leigos/E8ZtDwAAQBAJ?hl=pt-BR&gbpv=1&dq=html&printsec=frontcover>
+        A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+    </blockquote>
+    </p>
+
+    
+    <p>Eu posso criar dentro do &lt;blockquote&gt; &lt;/blockquote&gt; um parâmetro cite= e colo a url do site onde copiei a citação. Isto não muda em nada visível na página mas faz diferença para os mecanismos de busca.
+    Assim você pode manter os direitos do criador da citação.</p>
+
+    <h2>Abreviações - abbr</h2>
+
+    <p>Estou estudando <abbr title="HyperText Marcap Language">HTML</abbr> e <abbr title="Cascaging style sheets">CSS</abbr>. Estou amando!</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    
+    <p> No Gimp fizemos uma simulação de três tamanhos de imagens. </p>
+
+        <ul>
+            <li><b>Imagem para Celular:</b>  Tamanho 300x300 px.</li>
+            <li><b>Imagem para tablet:</b> Tamanho 700x700 px.</li>
+            <li><b>Imagem para computadores tvs etc...:</b> Tamanho 1000x1000 px.</li>
+        </ul>
+
+        <p>Todas com 80.000 px de resolução.</p>
+
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <p>Vamos criar uma tag nova <mark>&lt;picture&gt;&lt;/picture&gt;</mark> Essa tag parece com a tag imagem, ela tem o img dentro mas ela permite que você crie vários source, várias fontes, isto é, vai aparecer uma imagem aqui... mas qual imagem? Dizemos a imagem que vai aparecer com o código que colocamos dentro da tag &lt;picture&gt;&lt;/picture&gt;</p>
+        
+        <pre>
+            <code>
+            &lt;picture&gt;
+                &lt;img src="imagens/foto-g.png" alt="Imagem flexível"&gt;
+            &lt;/picture&gt;
+            </code>
+        </pre>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="foto-m.png" type="image/png">
+        <img src="foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <p>Dentro da tag &lt;picture&gt;&lt;/picture&gt; vamos criar uma tag <mark>img src= "" alt=""</mark> em src= colocar a imagem maior ("imagem/foto-g.png") em alt escrever "imagem flexível"
+    </p>
+    
+    <p> Acima da tag img vamos criar outra tag chamada <mark>&lt;source&gt;&lt;/source&gt;</mark> no formato média:type que já sugere a largura mínima mas podemos começar com a largura máxima é só mudar para <mark>"(max-width: )"</mark> você coloca o tamanho da imagem grande <mark>"(max-width: 1000px)"</mark> O tamanho máximo sendo mil (Coloque sempre 50px a mais pra evitar a barra de rolagem), podemos carregar a foto M colocando o nome da imagem m em srcset="imagens/foto-m.png" como ela é menor que 1000px ele vai carregar a foto m. Em type= "image/ coloca o tipo da imagem no caso png.</p>
+
+    <p>Como incluir a imagem p? Acima da imagem M (tem que ser acima!) vamos criar outro source do mesmo tipo <mark>media:type=</mark>. Em média="(<mark>max</mark>-width: <mark>750px</mark>)" em scrset=<mark>"imagem/foto-p.png"</mark> e em type="image/<mark>png"</mark></p>
+    
+    <pre>
+        <code>
+            &lt;picture&gt;
+                &lt;img src="imagens/foto-g.png" alt="Imagem flexível"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+
+    <pre>
+        <code>
+            &lt;picture&gt;
+            &lt;source media="(<mark>max</mark>-width: <mark>1050px</mark>)" srcset="<mark>imagens/foto-m.png</mark>" <br>        type="image/<mark>png</mark>"&gt; &lt;img src="imagens/foto-g.png" alt="Imagem flexível"&gt;
+        </code>
+    </pre>
+
+    <pre>
+        <code>
+            &lt;picture&gt;
+                &lt;source media="(<mark>max</mark>-width: <mark>750px</mark>)" srcset="<mark>imagens/foto-p.png</mark>" <br>    type="image/<mark>png</mark>"&gt;
+                &lt;source media="(max-width: 1050px)" srcset="imagens/foto-m.png" <br> type="image/png"&gt;
+                &lt;img src="imagens/foto-g.png" alt="Imagem flexível"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+
+    <p><b>Importante!</b> <i>Sempre vai colocando os source de baixo para cima da imagem maior para a menor</i></p>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <h2>Colocando áudio no site</h2>
+
+        <p>precisa tomar bastante atenção com o tamnho do arquivo, arquivo mp3 com máxima qualidade geram arquivos muito grandes, assim como as imagem, porém áudios grandes são maiores ainda. Tudo que vimos sobre imagem pode ser tranferido para mídias e vídeos etc.</p>
+        <p>Existem duas maneiras de adicionar áudio.</p>
+
+        <h1>Reproduzindo áudio</h1>
+
+        <h2>Vamos aprender a reproduzir áudios em HTML5.</h2>
+
+        <p>Escreva a tag <mark>audio</mark> que ja vai pedir o parâmetro <mark>src=""</mark> aperta as teclas <mark>Ctrl + espaço</mark> e seleciona o áudio que você quer reproduzir. Em seguida coloque mais dois parâmetro o <mark>controls</mark> e o <mark>autoplay</mark>.</p>
+
+        <pre>
+            <code>
+            &lt;<mark>audio</mark>&gt;
+                src="<mark>midia/Love Aside - Patrick Patrikios.mp3</mark>" <mark>controls</mark> <mark>autoplay</mark>&gt;
+            &lt;/audio&gt;
+            </code>
+        </pre>
+        
+        <audio src="Love Aside - Patrick Patrikios.mp3"  controls autoplay></audio>
+
+        <p>Muitos navegadores não tem compatibilidade com mp3 por exemplo, mas podemos usar outros arquivos. Mas pra isso você vai ter que ter o formato MP3, WAV, OGG. Se quiser ter compatibilidade total com todos os navega <br> dores mesmo assim ainda ficar meio pendurado no autoplay que, as vezes, não funciona você tem que ter uma outra forma de adicionar o áudio.</p>
+
+        <h3>Outra maneira de colocar áudio</h3>
+
+        <pre>
+            <code>
+                &lt;audio <mark>preload=</mark>"<mark>metadata</mark>" <mark>controls</mark> <mark>loop</mark>&gt;
+                    &lt;source src="midia/Clean and Dance - An Jone.mp3" type="audio/mpeg"&gt;
+                    &lt;source src="midia/guanacast-33.mp3" type="audio/ogg"&gt;
+                    &lt;source src="midia/guanacast-33.wav" type="audio/wav"&gt;
+                &lt;/audio&gt;
+            </code>
+        </pre>
+
+        <audio preload="metadata" controls loop>
+            <source src="midia/Clean and Dance - An Jone.mp3" type="audio/mpeg">
+            <source src="guanacast-33.mp3" type="audio/ogg">
+            <source src="guanacast-33.wav" type="audio/wav">
+        </audio>
+
+        <p>Lembre-se que a ordem dos arquivos é muito importante, o que você colocar primeiro ele vai tentar rodar, se ele não conseguir ele vai tentar carregar o próximo da lista de cima pra baixo.</p>
+        
+        <p>Se ele não conseguir reproduzir nenhum deles significa que seu navegador não consegue reproduzir áudio.</p> 
+        
+        <a href="No.5 The Day I Met Her - Esther Abrami.mp3">Clique aqui para baixar o arquivo mp3</a>
+
+        <p>Podemos incluir alguns parâmetros como o <mark>preload=""</mark> que vai vai ter três opções <mark>auto</mark>, <mark>metadata</mark> e <mark>none</mark></p>
+
+        <p>O padrão é <b>auto</b> e é meio perigoso pq ele só vai considerar que o site terminou de carregar depois que você carregar todo áudio também, no caso de um arquivo grande como o do podcast com quase 32 megas é muito pesado, se tentar carregar no celular vai complicar.</p>
+        
+        <p>Se você colocar nada ou colocar auto é umas das piores coisas que você pode fazer no seu site. <b>metadata</b> vai carregar só o nome do arquivo, algumas informações tipo data, duração etc. E <b>none</b> ele não vai carregar nada, só quando o usuário apertar play.</p>
+        <p>Existe também o <b>loop</b> que é o seguinte quando o áudio termina ele recomeça o áudio.</p>
+        
+        <p><b>Obs.:</b> <i>tente evitar arquivos WAV pois são arquivos extremaente grandes e pesados. Falando tanto de imagem, vídeo ou áudio, qualidade top é pra arquivo feito download não para arquivo de navegação</i></p>
+    </audio>
+</body>
+</html>

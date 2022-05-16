@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p><i>Para aparecer nos buscadores do Google estude sobre SEO (Search Engine Optimization).</i></p>
+
+        <h2>Usando links externos</h2>
+
+        <p>Envelopa a frase que você quer transformar em link e use a tag &lt;a&gt; vai surgir um parâmetro <mark>href=""</mark> entre as aspas vc coloca o endereço do site.</p>
+
+        <p>&rArr; para o <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf" target="_blank" rel="external">repositório do Prof. Gustavo guanabara no GitHub</a></p>
+
+        <p>&rArr; Acesse Também a <a href="https://www.youtube.com/watch?v=LeOVXQDsAIY&t=418s"target="_blank" rel="external">aula em vídeo número 10 </a>no YouTube</p>
+
+        <p>Dessa forma você sobrepõe o site externo ao seu, é muito provável que a pessoa não retorne mais ao seu site. o que podemos fazer? <br> quando for um link externo sempre use o parâmetro <mark>target="_blank"  rel</mark><i>(relativo a)</i> <mark>="external"</mark> depois da url. Assim abrirá o site em outra aba. Isso se aplica em links que levam a outros sites que não os seus</p>
+
+        <pre>
+            <code>
+                &lt;<mark>a</mark> href="https://github.com/gustavoguanabara/html-css/blob <br> /master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf" <br> <mark>target="_blank" rel="external"</mark>>repositório do Prof. Gustavo guanabara <br> no GitHub&lt;/a&gt;
+            </code>
+        </pre>
+
+        
+
+    <h1>Usando links internos</h1>
+    <p>Links internos farão relação com outra página que está dentro do nosso servidor e diz respeito a nossa própria página. Para isso temos que ter outras páginas. <br> Temos dois tipos de link interno. <br> temos o index geralmento por onde o site é aberto e lá podemos criar novo arquivo com o nome pagoo2.html, por exemplo, essa será minha página 2.</p>
+
+        <p>Se você quiser ver a minha segunda página, <a href="pag002.html" rel="next" target="_self">clique aqui.</a></p>
+
+        <p>Use  tag <mark>&lt;a&gt;&lt;/a&gt;</mark> e entre as aspas aperte ctrl + espaço que aparecerá todas as páginas que você tiver feito e é só escolher. Mas para que isso funcione as páginas criadas tem que estar na mesma pasta index</p>
+
+        <p>Não existe o parametro rel="external" nem "internal" mas podemos usar <mark>rel="next"</mark> (próxima) no index e <mark>"prev"</mark> (anterior) na pag002. Isso será útil para o mecanismo de busca saber qual é o seu sistema de navegação. Você não vai deixar o google decidir qual é a próxima página você ja está dizendo pra ele.</p>
+
+        <p>Você também pode acessar minha <a href="noticias/pag003.html" rel="next" target="_self">terceira página</a></p>
+
+        <p>podemos colocar um target indicando que a página que vamos abrir é para a própria página para não ficar abrindo várias abas pois os links são internos então não há necessidade. para isso use target="_self". Self significa na própria aba.</p>
+
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/meulivro (1).zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+</body>
+</html>
