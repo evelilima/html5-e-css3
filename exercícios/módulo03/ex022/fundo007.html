@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        #conteiner {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            position: relative;/* Já é relativo por padrão*/
+            height: 500px;
+            padding: 10px;
+            background-color: purple;
+        }
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            position: absolute; /*Quando coloco posicionamento absoluto eu posso usar duas propriedades importantes que é a left e top onde vamos poder mecher e posicionar o conteúdo. podemos fazer em %.*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;
+            top: 50%;/*vai considerar o canto superior esquerdo do conteúdo e centralizar com o centro da section. Para centralizar centro do conteúdo com o centro da section temos que aplicar uma transformação.*/
+
+            transform: translate(-50%, -50%);/*é eu mexer em qualquer caixa aplicando alguma alteração de transformação nela.*/
+            
+        }
+    </style>
+</head>
+<body>
+    <section id="conteiner">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
