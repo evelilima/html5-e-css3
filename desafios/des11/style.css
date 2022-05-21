@@ -4,3 +4,35 @@
     format(truetype)
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root { 
+--font01: 'Sriracha', cursive;
+--font02: 'passion'
+}
+/*Shorthand - background 
+               color > image > position > repeat > [size] > attachment*/
+
+body {
+    background: beige url(imagens/background001.jpg) center top no-repeat fixed;
+    background-size: cover;
+}
+h1 {
+    font-family: var(--font02);
+}
+main {
+    margin: -10px;
+    font-size: larger;
+    font-family: var(--font01);
+}
+
+main.transparent {
+    background-color: transparent;
+    max-width: 400px;
+    margin: left;
+    padding: 20px;
+}
+main.branco {
+    background-color: white;
+    padding: 20px;
+}
