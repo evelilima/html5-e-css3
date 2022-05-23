@@ -17,7 +17,7 @@
 /*Shorthand - background 
                color > image > position > repeat > [size] > attachment*/
 
-body {
+html, body {
     min-height: 100vh;
     background-color: darkgrey;
     font-family: var(--fonte1);
@@ -28,8 +28,8 @@ header {
     text-align: center;   
 }
 header > h1 {
-    padding-top: 50px;
-    font-variant: small-caps;
+    padding-top: 50px; /*"sempre" 50px é uma altura de topo boa, em alguns casos.*/
+    font-variant: small-caps; /*text-transform: uppercase; transforma todas as letras em maiúsculas. Já o font-variant: small-caps; tranforma todas as letras em maiúsculas porém as primeiras letras das palavras ficam maiores.*/
     font-family: var(--font02);
     font-size: 10vw;
 }
@@ -37,12 +37,12 @@ header > p {
     padding-bottom: 50px;
 
 }
-header a, footer a {
+a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
 }
-header a:hover, footer a:hover {
+a:hover {
     text-decoration: underline;
 }
 
@@ -56,8 +56,7 @@ section {
     font-family: var(--font03);
     font-size: 3.5vw;
 
-}
-section.normal {
+}section.branco {
     background-color: white;
     color: black;
 }
@@ -67,7 +66,7 @@ section > p {
 section.imagem {
     background-color: rgb(51, 51, 51);
     color: white;
-    box-shadow: 6px 6px 13px 0px rgb(0 0 0 / 47%);
+    box-shadow: inset 6px 6px 13px 0px rgb(0 0 0 / 47%);
     background-size: cover;
     background-attachment: fixed;  
 }
@@ -80,9 +79,11 @@ section.imagem > p {
 section#img01 {
     background-image: url(imagens/background001.jpg);
     background-position: right center;
+    
 }
 section#img02 {
     background-image: url(imagens/background002.jpg);
+    
 }
 footer {
     background-color: black;
