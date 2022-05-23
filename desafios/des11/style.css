@@ -18,7 +18,7 @@
                color > image > position > repeat > [size] > attachment*/
 
 html, body {
-    min-height: 100vh;
+    min-height: 98vh;
     width: auto;
     background-color: darkgrey;
     font-family: var(--fonte1);
